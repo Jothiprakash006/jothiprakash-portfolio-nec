@@ -394,12 +394,7 @@
       animation-delay: 1.5s;
     }
 
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, var(--neon), transparent);
-      animation: scrollPulse 2s infinite;
-    }
+   
 
 
     .section-header {
