@@ -4,17 +4,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jothiprakash — AI & Web Developer</title>
+  <title>Jothiprakash — Full Stack Developer & UI/UX Designer</title>
+  <meta name="description"
+    content="Portfolio of Jothiprakash, Full Stack Developer and UI/UX Designer. Student of Computer Science Engineering at Nandha Engineering College, building intelligent systems, responsive web apps, and intuitive user interfaces." />
+  <meta name="keywords"
+    content="Jothiprakash, Full Stack Developer, UI/UX Designer, AI Developer, Web Developer, Machine Learning, Computer Vision, Flutter Developer, Portfolio" />
+  <meta name="author" content="Jothiprakash" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#050508" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jothiprakash — Full Stack Developer & UI/UX Designer" />
+  <meta property="og:description"
+    content="Building intelligent systems, responsive web apps, and intuitive user interfaces." />
+  <meta property="og:image" content="avatar.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Jothiprakash — Full Stack Developer & UI/UX Designer" />
+  <meta name="twitter:description"
+    content="Building intelligent systems, responsive web apps, and intuitive user interfaces." />
+  <meta name="twitter:image" content="avatar.jpg" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jothiprakash",
+    "jobTitle": "Full Stack Developer & UI/UX Designer",
+    "url": "",
+    "sameAs": [
+      "https://github.com/Jothiprakash006",
+      "https://www.linkedin.com/in/jothiprakash-p-b53b692a2",
+      "https://leetcode.com/u/Jothiprakash9865/",
+      "https://cssbattle.dev/player/jothiprakash"
+    ]
+  }
+  </script>
 </head>
 
 <body>
-  <div class="cursor-glow" id="cursor"></div>
-  <canvas id="particles-canvas"></canvas>
+  <a href="#hero" class="skip-link">Skip to content</a>
+  <div class="cursor-glow" id="cursor" aria-hidden="true"></div>
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
 
   <nav id="navbar">
@@ -22,14 +62,12 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#leetcode">LeetCode</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-controls">
-      <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">
-        <i class="fas fa-moon"></i>
-      </button>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -41,6 +79,7 @@
     <button class="close-menu" id="closeMenu"><i class="fas fa-times"></i></button>
     <a href="#about" class="mobile-link">About</a>
     <a href="#skills" class="mobile-link">Skills</a>
+    <a href="#leetcode" class="mobile-link">LeetCode</a>
     <a href="#projects" class="mobile-link">Projects</a>
     <a href="#experience" class="mobile-link">Experience</a>
     <a href="#contact" class="mobile-link">Contact</a>
@@ -53,14 +92,15 @@
         <span>Available for Opportunities</span>
       </div>
       <h1 class="hero-name">Jothiprakash</h1>
-      <p class="hero-title">AI Developer &nbsp;|&nbsp; Web Developer &nbsp;|&nbsp; ML Enthusiast</p>
-      <p class="hero-tagline">Building intelligent systems and futuristic web experiences</p>
+      <p class="hero-title">Computer Science Engineering Student &nbsp;|&nbsp; Full Stack Developer &nbsp;|&nbsp; UI/UX
+        Designer</p>
+      <p class="hero-tagline">Building intelligent systems, responsive web apps, and intuitive user interfaces</p>
       <a href="#projects" class="hero-cta">
         <span>View My Work</span>
         <i class="fas fa-arrow-right"></i>
       </a>
     </div>
-   
+
   </section>
 
 
@@ -72,19 +112,21 @@
     <div class="about-grid">
       <div class="about-avatar-wrap reveal-left">
         <div class="about-avatar-bg">
-          <img src="image.png" alt="Profile Picture" class="avatar-icon" />
+          <img src="avatar.jpg" alt="Portrait of Jothiprakash" class="avatar-icon" width="270" height="270"
+            loading="eager" />
         </div>
       </div>
       <div class="about-text reveal-right">
         <h2>Building the <span>Future</span> with Code</h2>
         <p>
-          I'm <strong>Jothiprakash</strong>, a passionate AI & Web Developer who thrives at the intersection of
-          intelligent systems and sleek interfaces. I love turning complex problems into elegant, user-friendly
-          solutions.
+          I'm <strong>Jothiprakash</strong>, a passionate CSE Student, Full Stack Developer & UI/UX Designer who
+          thrives at the intersection of
+          intelligent systems and sleek interfaces. I love collaborating in motivated project groups to turn complex
+          problems into elegant, user-friendly solutions.
         </p>
         <p>
           From training machine learning models to engineering real-time computer vision pipelines and shipping polished
-          web apps — I bring ideas to life with clean code and creative thinking.
+          web apps — my teams and I bring ideas to life with clean code and structured coordination.
         </p>
         <div class="skill-tags">
           <span class="skill-tag">Python</span>
@@ -103,111 +145,283 @@
 
   <section id="skills" class="section-pad">
     <div class="section-header reveal">
-      <h2 class="section-title">Tech Arsenal</h2>
+      <h2 class="section-title">Technical Skills</h2>
+      <p class="section-subtitle">Technologies and tools I work with across the stack.</p>
       <div class="section-line"></div>
     </div>
     <div class="skills-grid">
 
+      <!-- Programming Languages Card -->
       <div class="skill-card reveal">
         <div class="skill-card-header">
-          <div class="skill-card-icon"><i class="fas fa-code"></i></div>
-          <div class="skill-card-title">Programming</div>
+          <div class="skill-card-icon font-mono">&lt;/&gt;</div>
+          <div class="skill-card-title">Programming Languages</div>
         </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">Python</span><span class="skill-pct">45%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="45"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">Java</span><span class="skill-pct">60%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="60"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">Dart / Flutter</span><span
-              class="skill-pct">60%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="60"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">SQL</span><span class="skill-pct">50%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="50"></div>
-          </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Java</span>
+          <span class="skill-chip">Python</span>
         </div>
       </div>
 
+      <!-- Frontend Card -->
+      <div class="skill-card reveal" style="transition-delay:0.05s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon font-mono">{}</div>
+          <div class="skill-card-title">Frontend Technologies</div>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">HTML</span>
+          <span class="skill-chip">CSS</span>
+          <span class="skill-chip">Bootstrap</span>
+          <span class="skill-chip">React</span>
+          <span class="skill-chip">JavaScript</span>
+        </div>
+      </div>
+
+      <!-- Mobile App Development Card -->
       <div class="skill-card reveal" style="transition-delay:0.1s">
         <div class="skill-card-header">
-          <div class="skill-card-icon" style="background:linear-gradient(135deg,var(--neon2),var(--neon3))"><i
-              class="fas fa-brain"></i></div>
-          <div class="skill-card-title">AI / ML</div>
+          <div class="skill-card-icon"><i class="fas fa-mobile-alt"></i></div>
+          <div class="skill-card-title">Mobile App Development</div>
         </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">Machine Learning</span><span
-              class="skill-pct">50%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="50"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">TensorFlow</span><span class="skill-pct">55%</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="55"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">OpenCV</span><span class="skill-pct">65%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="65"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">NLP</span><span class="skill-pct">45%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="45"></div>
-          </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Flutter</span>
         </div>
       </div>
 
+      <!-- AI & Machine Learning Card -->
+      <div class="skill-card reveal" style="transition-delay:0.15s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><i class="fas fa-microchip"></i></div>
+          <div class="skill-card-title">AI & Machine Learning</div>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Machine Learning</span>
+          <span class="skill-chip">Deep Learning</span>
+          <span class="skill-chip">YOLOv8</span>
+          <span class="skill-chip">OpenCV</span>
+          <span class="skill-chip">TensorFlow</span>
+          <span class="skill-chip">Scikit-Learn</span>
+        </div>
+      </div>
+
+      <!-- UI/UX Design Card -->
       <div class="skill-card reveal" style="transition-delay:0.2s">
         <div class="skill-card-header">
-          <div class="skill-card-icon" style="background:linear-gradient(135deg,#00e5ff,#00b37a)"><i
-              class="fas fa-globe"></i></div>
-          <div class="skill-card-title">Web Dev</div>
+          <div class="skill-card-icon"><i class="fas fa-palette"></i></div>
+          <div class="skill-card-title">UI/UX Design</div>
         </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">HTML / CSS</span><span class="skill-pct">80%</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="80"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">JavaScript</span><span class="skill-pct">50%</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="50"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">React</span><span class="skill-pct">60%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="60"></div>
-          </div>
-        </div>
-        <div class="skill-item">
-          <div class="skill-item-header"><span class="skill-name">Node.js</span><span class="skill-pct">45%</span></div>
-          <div class="progress-bar">
-            <div class="progress-fill" data-pct="45"></div>
-          </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">Canva</span>
         </div>
       </div>
 
+      <!-- Development Tools Card -->
+      <div class="skill-card reveal" style="transition-delay:0.25s">
+        <div class="skill-card-header">
+          <div class="skill-card-icon"><i class="fas fa-tools"></i></div>
+          <div class="skill-card-title">Development Tools</div>
+        </div>
+        <div class="skill-chips">
+          <span class="skill-chip">Visual Studio Code</span>
+          <span class="skill-chip">Eclipse</span>
+          <span class="skill-chip">Jupyter Notebook</span>
+          <span class="skill-chip">Git</span>
+          <span class="skill-chip">GitHub</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="leetcode" class="section-pad">
+    <div class="section-header reveal">
+      <h2 class="section-title">Coding Profile</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="leetcode-wrapper reveal">
+      <div class="leetcode-card">
+        <div class="leetcode-header">
+          <div class="leetcode-header-left">
+            <h3 class="leetcode-title">LeetCode Dashboard</h3>
+            <span class="leetcode-badge">
+              <span class="status-dot"></span>
+              Live Stats
+            </span>
+          </div>
+          <button class="leetcode-refresh-btn" id="leetcodeRefresh" aria-label="Refresh stats">
+            <i class="fas fa-sync-alt"></i>
+          </button>
+        </div>
+
+        <div class="leetcode-body">
+          <div class="leetcode-chart-panel">
+            <div class="leetcode-circular-wrap">
+              <svg class="leetcode-circular-svg" viewBox="0 0 150 150">
+                <circle class="circle-bg" cx="75" cy="75" r="60"></circle>
+                <circle class="circle-fg" cx="75" cy="75" r="60" id="circleProgress"></circle>
+              </svg>
+              <div class="circle-text">
+                <span class="solved-num" id="ltSolved">426</span>
+                <span class="solved-total" id="ltTotal">/3991</span>
+                <span class="solved-status">✓ SOLVED</span>
+              </div>
+            </div>
+            <div class="leetcode-attempting">
+              <span id="ltAttempting">26</span> Attempting
+            </div>
+          </div>
+
+          <div class="leetcode-bars-panel">
+            <div class="bar-group">
+              <div class="bar-info">
+                <span class="bar-label">Easy</span>
+                <span class="bar-nums"><span id="ltEasySolved">259</span><span class="bar-slash">/</span><span
+                    class="bar-max" id="ltEasyTotal">954</span></span>
+              </div>
+              <div class="leetcode-progress-bar">
+                <div class="progress-fill easy" id="ltEasyBar" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div class="bar-group">
+              <div class="bar-info">
+                <span class="bar-label">Medium</span>
+                <span class="bar-nums"><span id="ltMediumSolved">163</span><span class="bar-slash">/</span><span
+                    class="bar-max" id="ltMediumTotal">2084</span></span>
+              </div>
+              <div class="leetcode-progress-bar">
+                <div class="progress-fill medium" id="ltMediumBar" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div class="bar-group">
+              <div class="bar-info">
+                <span class="bar-label">Hard</span>
+                <span class="bar-nums"><span id="ltHardSolved">4</span><span class="bar-slash">/</span><span
+                    class="bar-max" id="ltHardTotal">953</span></span>
+              </div>
+              <div class="leetcode-progress-bar">
+                <div class="progress-fill hard" id="ltHardBar" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="leetcode-metrics">
+          <div class="metric-card">
+            <span class="metric-icon">🏆</span>
+            <div class="metric-meta">
+              <span class="metric-title">Contest Rating</span>
+              <span class="metric-val" id="ltContestRating">1,630</span>
+              <span class="metric-desc">Live Rating on LeetCode</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-icon">🌏</span>
+            <div class="metric-meta">
+              <span class="metric-title">Global Ranking</span>
+              <span class="metric-val" id="ltGlobalRanking">175,371 / 875,878</span>
+              <span class="metric-desc">Contest percentile ranking</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-icon">⭐</span>
+            <div class="metric-meta">
+              <span class="metric-title">Rank</span>
+              <span class="metric-val" id="ltRank">271,440</span>
+              <span class="metric-desc">Overall profile ranking globally</span>
+            </div>
+          </div>
+
+          <div class="metric-card">
+            <span class="metric-icon">☑️</span>
+            <div class="metric-meta">
+              <span class="metric-title">Completion</span>
+              <span class="metric-val" id="ltCompletion">10.67%</span>
+              <span class="metric-desc">Solved of 3,991 questions</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="how-i-work" class="section-pad">
+    <div class="section-header reveal">
+      <h2 class="section-title">How I Work</h2>
+      <div class="section-line"></div>
+    </div>
+
+    <div class="process-grid reveal">
+      <!-- Step 1: Discuss -->
+      <div class="process-card step-blue">
+        <div class="process-icon-wrap">
+          <div class="process-badge">01</div>
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <h3 class="process-card-title">Discuss</h3>
+        <p class="process-card-text">We hop on a quick call or chat. I understand your goal, timeline, and budget — no
+          jargon, no fluff.</p>
+      </div>
+
+      <!-- Step 2: Design & Build -->
+      <div class="process-card step-purple">
+        <div class="process-icon-wrap">
+          <div class="process-badge">02</div>
+          <i class="fas fa-drafting-compass"></i>
+        </div>
+        <h3 class="process-card-title">Design & Build</h3>
+        <p class="process-card-text">I design, develop, and keep you updated at every step. You get to review before
+          anything is finalised.</p>
+      </div>
+
+      <!-- Step 3: Deliver & Launch -->
+      <div class="process-card step-violet">
+        <div class="process-icon-wrap">
+          <div class="process-badge">03</div>
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3 class="process-card-title">Deliver & Launch</h3>
+        <p class="process-card-text">I deploy your product, hand over everything — source code, docs, domain setup — and
+          stay for support.</p>
+      </div>
+    </div>
+
+    <!-- Tech Marquee Ticker -->
+    <div class="ticker-section reveal">
+      <h4 class="ticker-title">Tech I Build With</h4>
+      <div class="marquee-container">
+        <div class="marquee-content">
+          <!-- Set 1 -->
+          <span class="ticker-item">React</span>
+          <span class="ticker-item">TypeScript</span>
+          <span class="ticker-item">Node.js</span>
+          <span class="ticker-item">Python</span>
+          <span class="ticker-item">Flutter</span>
+          <span class="ticker-item">OpenCV</span>
+          <span class="ticker-item">TensorFlow</span>
+          <span class="ticker-item">SQL</span>
+          <span class="ticker-item">Tailwind CSS</span>
+          <span class="ticker-item">Generative AI</span>
+          <!-- Set 2 -->
+          <span class="ticker-item">React</span>
+          <span class="ticker-item">TypeScript</span>
+          <span class="ticker-item">Node.js</span>
+          <span class="ticker-item">Python</span>
+          <span class="ticker-item">Flutter</span>
+          <span class="ticker-item">OpenCV</span>
+          <span class="ticker-item">TensorFlow</span>
+          <span class="ticker-item">SQL</span>
+          <span class="ticker-item">Tailwind CSS</span>
+          <span class="ticker-item">Generative AI</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -225,18 +439,22 @@
           <div class="project-preview-icon" style="color:var(--neon)">📷</div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">Smart Visitor Monitoring System</h3>
-          <p class="project-desc">An AI-powered real-time visitor tracking system using computer vision to detect,
-            identify, and log visitors intelligently. Features live face recognition, automated alerts, and a dashboard
-            for monitoring.</p>
+          <span class="group-badge"><i class="fas fa-users"></i> Academic Group Project</span>
+          <h3 class="project-title">AI and IoT-Based Smart Surveillance System</h3>
+          <p class="project-desc">Developed a real-time smart surveillance system in collaboration with a project group
+            using Python, YOLOv8, OpenCV, and ESP32 to detect crowd
+            formation and fight incidents. Integrated IoT-based buzzer and LED alerts to provide instant notifications
+            and reduce manual monitoring.</p>
           <div class="project-stack">
             <span class="stack-badge">Python</span>
+            <span class="stack-badge">YOLOv8</span>
             <span class="stack-badge">OpenCV</span>
-            <span class="stack-badge">AI</span>
-            <span class="stack-badge">Deep Learning</span>
-            <span class="stack-badge">Flask</span>
+            <span class="stack-badge">ESP32</span>
+            <span class="stack-badge">IoT</span>
           </div>
-          <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> View Project</a>
+          <a href="https://github.com/Jothiprakash006" class="project-btn" target="_blank"
+            rel="noopener noreferrer"><!-- TODO: replace with this project's repo/live URL --><i
+              class="fas fa-external-link-alt"></i> View Project</a>
         </div>
       </div>
 
@@ -247,17 +465,21 @@
           <div class="project-preview-icon" style="color:var(--neon2)">🤖</div>
         </div>
         <div class="project-body">
-          <h3 class="project-title">Voice Assistant "Joe"</h3>
-          <p class="project-desc">A JARVIS-inspired personal AI assistant that understands natural language, executes
-            commands, controls applications, fetches real-time data, and carries on contextual conversations.</p>
+          <span class="group-badge"><i class="fas fa-users"></i> Academic Group Project</span>
+          <h3 class="project-title">AI Voice Assistant</h3>
+          <p class="project-desc">Co-engineered in a project team, this AI-powered voice assistant uses Python,
+            SpeechRecognition,
+            and pyttsx3 for voice-based interaction. Implemented features such as web browsing, application launching,
+            and voice command automation.</p>
           <div class="project-stack">
             <span class="stack-badge">Python</span>
-            <span class="stack-badge">NLP</span>
-            <span class="stack-badge">Speech Recognition</span>
+            <span class="stack-badge">SpeechRecognition</span>
             <span class="stack-badge">pyttsx3</span>
-            <span class="stack-badge">OpenAI</span>
+            <span class="stack-badge">Automation</span>
           </div>
-          <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> View Project</a>
+          <a href="https://github.com/Jothiprakash006" class="project-btn" target="_blank"
+            rel="noopener noreferrer"><!-- TODO: replace with this project's repo/live URL --><i
+              class="fas fa-external-link-alt"></i> View Project</a>
         </div>
       </div>
 
@@ -265,20 +487,24 @@
         <div class="project-preview p3-bg">
           <div class="project-preview-grid"></div>
           <div class="project-preview-bg">♟</div>
-          <div class="project-preview-icon" style="color:#00ff88">♛</div>
+          <div class="project-preview-icon" style="color:var(--neon2)">♛</div>
         </div>
         <div class="project-body">
+          <span class="group-badge"><i class="fas fa-users"></i> Academic Group Project</span>
           <h3 class="project-title">Chess App</h3>
-          <p class="project-desc">A fully functional cross-platform chess application with an intuitive UI, move
-            validation, game history, and smooth animations. Built with Flutter and Riverpod for reactive state
-            management.</p>
+          <p class="project-desc">A fully functional cross-platform chess application built collaboratively by our
+            project group
+            with Flutter and Riverpod for reactive state management. Features an intuitive UI, move validation, and game
+            history.</p>
           <div class="project-stack">
             <span class="stack-badge">Flutter</span>
             <span class="stack-badge">Dart</span>
             <span class="stack-badge">Riverpod</span>
             <span class="stack-badge">Firebase</span>
           </div>
-          <a href="#" class="project-btn"><i class="fas fa-external-link-alt"></i> View Project</a>
+          <a href="https://github.com/Jothiprakash006" class="project-btn" target="_blank"
+            rel="noopener noreferrer"><!-- TODO: replace with this project's repo/live URL --><i
+              class="fas fa-external-link-alt"></i> View Project</a>
         </div>
       </div>
 
@@ -295,45 +521,61 @@
     </div>
     <div class="timeline">
 
+      <!-- Education -->
       <div class="timeline-item reveal">
         <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
         <div class="timeline-content">
-          <div class="timeline-title">B.Tech — Computer Science & Engineering</div>
-          <div class="timeline-desc">Pursuing a degree with focus on intelligent systems, algorithms, and software
-            engineering. Maintaining strong academics while building real-world projects.</div>
+          <div class="timeline-title">Bachelor of Engineering — Computer Science & Engineering</div>
+          <div class="timeline-sub">Nandha Engineering College, Erode &nbsp;|&nbsp; 2023–2027</div>
+          <div class="timeline-desc">Pursuing a degree focusing on intelligent systems, algorithms, and software
+            engineering. Maintaining a CGPA of 7.75/10 while collaborating on real-world systems.</div>
         </div>
       </div>
 
+      <!-- Internship -->
+      <div class="timeline-item reveal" style="transition-delay:0.05s">
+        <div class="timeline-dot" style="background:linear-gradient(135deg,var(--neon),var(--neon2))"><i
+            class="fas fa-building"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-title">Mobile App Development Intern</div>
+          <div class="timeline-sub">Nithra Apps India Private Limited, Tiruchengode &nbsp;|&nbsp; 2025</div>
+          <div class="timeline-desc">Gained hands-on experience in mobile application development using modern
+            development practices. Collaborated with the team to understand the complete Software Development Lifecycle
+            (SDLC) and debugging workflows.</div>
+        </div>
+      </div>
+
+      <!-- Projects and experience -->
       <div class="timeline-item reveal" style="transition-delay:0.1s">
         <div class="timeline-dot" style="background:linear-gradient(135deg,var(--neon2),var(--neon3))"><i
             class="fas fa-laptop-code"></i></div>
         <div class="timeline-content">
-          <div class="timeline-title">AI/ML Developer — Freelance Projects</div>
-          <div class="timeline-sub">Independent</div>
-          <div class="timeline-desc">Developed computer vision pipelines, trained ML models, and built end-to-end AI
-            applications for various use cases including monitoring and prediction.</div>
+          <div class="timeline-title">AI & IoT Surveillance — Academic Group Projects</div>
+          <div class="timeline-sub">Project Group Member</div>
+          <div class="timeline-desc">Collaborated in project teams to develop real-time smart surveillance systems using
+            Python, YOLOv8, OpenCV, and ESP32. Integrated IoT alarms and crowd detection models.</div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal" style="transition-delay:0.15s">
+        <div class="timeline-dot" style="background:linear-gradient(135deg,var(--neon),var(--neon2))"><i
+            class="fas fa-mobile-alt"></i></div>
+        <div class="timeline-content">
+          <div class="timeline-title">Flutter App Developer — Team Project</div>
+          <div class="timeline-sub">Academic Project Team</div>
+          <div class="timeline-desc">Co-engineered cross-platform mobile applications using Flutter and Riverpod in
+            academic group projects. Developed the fully-functional Chess App with real-time gameplay.</div>
         </div>
       </div>
 
       <div class="timeline-item reveal" style="transition-delay:0.2s">
-        <div class="timeline-dot" style="background:linear-gradient(135deg,#00ff88,#00d4ff)"><i
-            class="fas fa-mobile-alt"></i></div>
-        <div class="timeline-content">
-          <div class="timeline-title">Flutter App Developer</div>
-          <div class="timeline-sub">Personal & Academic Projects</div>
-          <div class="timeline-desc">Engineered cross-platform mobile applications using Flutter and Riverpod. Built the
-            fully-functional Chess App with real-time gameplay and elegant UI.</div>
-        </div>
-      </div>
-
-      <div class="timeline-item reveal" style="transition-delay:0.3s">
-        <div class="timeline-dot" style="background:linear-gradient(135deg,var(--neon3),#ff8c00)"><i
+        <div class="timeline-dot" style="background:linear-gradient(135deg,var(--neon2),var(--neon))"><i
             class="fas fa-microphone"></i></div>
         <div class="timeline-content">
-          <div class="timeline-title">Voice AI & Automation</div>
-          <div class="timeline-sub">Personal Project — Joe Assistant</div>
-          <div class="timeline-desc">Built "Joe," a JARVIS-like voice assistant combining NLP, speech synthesis, and
-            real-time API integrations. Exploring agentic AI workflows.</div>
+          <div class="timeline-title">Voice AI & Automation — Group Project</div>
+          <div class="timeline-sub">Project Group Project</div>
+          <div class="timeline-desc">Co-developed an AI-powered voice assistant using Python, SpeechRecognition, and
+            pyttsx3. Implemented features such as web browsing and application launching.</div>
         </div>
       </div>
 
@@ -352,19 +594,22 @@
         <p>Whether it's a collaboration, a project idea, or just a hello — my inbox is always open. I'm actively looking
           for opportunities to create impactful solutions.</p>
         <div class="social-links">
-          <a href="https://leetcode.com/u/Jothiprakash9865/" class="social-link" target="_blank">
+          <a href="https://leetcode.com/u/Jothiprakash9865/" class="social-link" target="_blank"
+            rel="noopener noreferrer">
             <i class="fas fa-code"></i>
             <span>LeetCode</span>
           </a>
-          <a href="https://cssbattle.dev/player/jothiprakash" class="social-link" target="_blank">
+          <a href="https://cssbattle.dev/player/jothiprakash" class="social-link" target="_blank"
+            rel="noopener noreferrer">
             <i class="fab fa-css3-alt"></i>
             <span>CSSBattle</span>
           </a>
-          <a href="https://github.com/Jothiprakash006" class="social-link" target="_blank">
+          <a href="https://github.com/Jothiprakash006" class="social-link" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
             <span>GitHub</span>
           </a>
-          <a href="https://www.linkedin.com/in/jothiprakash-p-b53b692a2" class="social-link" target="_blank">
+          <a href="https://www.linkedin.com/in/jothiprakash-p-b53b692a2" class="social-link" target="_blank"
+            rel="noopener noreferrer">
             <i class="fab fa-linkedin"></i>
             <span>LinkedIn</span>
           </a>
@@ -374,30 +619,39 @@
           </a>
         </div>
       </div>
-      <div class="contact-form reveal-right">
+      <form class="contact-form reveal-right" id="contactForm"
+        action="https://formsubmit.co/jothiprakashkiller@gmail.com" method="POST">
+        <!-- FormSubmit config: first submission triggers a confirmation email you must click to activate -->
+        <input type="hidden" name="_subject" value="New portfolio contact message" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" placeholder="Enter your name" />
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required />
         </div>
         <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="your@email.com" />
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="your@email.com" required />
         </div>
         <div class="form-group">
-          <label>Message</label>
-          <textarea rows="5" placeholder="Tell me about your project or idea..."></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..."
+            required></textarea>
         </div>
-        <button class="form-submit" onclick="handleSubmit(this)">
+        <button class="form-submit" type="submit">
           <span>Send Message &nbsp;<i class="fas fa-paper-plane"></i></span>
         </button>
-      </div>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
 
   <footer>
     <div class="footer-logo">Jothiprakash</div>
-    <p>Built with ❤️ by <span>Jothiprakash</span> &nbsp;·&nbsp; © 2025 All rights reserved</p>
+    <p>Built with ❤️ by <span>Jothiprakash</span> &nbsp;·&nbsp; © <span id="year">2025</span> All rights reserved</p>
   </footer>
 
   <script src="script.js"></script>

@@ -6,7 +6,7 @@
       --border: rgba(80, 80, 200, 0.2);
       --neon: #00d4ff;
       --neon2: #7b2fff;
-      --neon3: #ff2d78;
+      --neon3: #bd00ff;
       --purple: #1a0533;
       --text: #e8e8f0;
       --text2: #9090b8;
@@ -19,19 +19,6 @@
       --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    [data-theme="light"] {
-      --bg: #f0f0ff;
-      --bg2: #e8e8ff;
-      --bg3: #ffffff;
-      --surface: rgba(240, 240, 255, 0.85);
-      --border: rgba(80, 80, 200, 0.25);
-      --text: #0a0a20;
-      --text2: #4040a0;
-      --card-bg: rgba(255, 255, 255, 0.85);
-      --glow: 0 0 20px rgba(0, 180, 255, 0.3), 0 0 60px rgba(0, 180, 255, 0.1);
-      --neon: #0088cc;
-      --neon2: #6600ee;
-    }
 
     *,
     *::before,
@@ -54,6 +41,42 @@
       transition: background var(--transition), color var(--transition);
     }
 
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      z-index: 2000;
+      padding: 0.7rem 1.2rem;
+      background: var(--neon);
+      color: #000;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: top 0.2s ease;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--neon);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
 
     ::-webkit-scrollbar {
       width: 4px;
@@ -155,26 +178,6 @@
       gap: 1rem;
     }
 
-    .theme-toggle {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--neon);
-      font-size: 1rem;
-      transition: all var(--transition);
-      backdrop-filter: blur(12px);
-    }
-
-    .theme-toggle:hover {
-      border-color: var(--neon);
-      box-shadow: var(--glow);
-    }
 
     .hamburger {
       display: none;
@@ -587,61 +590,77 @@
     }
 
     .skill-card-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(80, 80, 200, 0.25);
+      background: rgba(10, 10, 25, 0.65);
+      color: var(--neon);
+      font-size: 0.95rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.3rem;
+      transition: all var(--transition);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-card:hover .skill-card-icon {
       background: linear-gradient(135deg, var(--neon), var(--neon2));
-      box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+      color: #050508;
+      border-color: transparent;
+      box-shadow: var(--glow);
     }
 
     .skill-card-title {
       font-family: var(--font-display);
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--text);
     }
 
-    .skill-item {
-      margin-bottom: 1.2rem;
-    }
-
-    .skill-item-header {
+    .skill-chips {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 0.5rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 0.4rem;
     }
 
-    .skill-name {
-      font-size: 0.85rem;
+    .skill-chip {
+      padding: 0.42rem 1rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text2);
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      transition: all var(--transition);
+      cursor: default;
+      backdrop-filter: blur(8px);
+    }
+
+    .skill-chip:hover {
+      background: rgba(255, 255, 255, 0.045);
+      border-color: var(--neon);
       color: var(--text);
-      font-weight: 600;
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.15);
+      transform: translateY(-2px);
     }
 
-    .skill-pct {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--neon);
+    /* Subtitle for technical skills section */
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--text2);
+      margin-top: 0.6rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
     }
 
-    .progress-bar {
-      height: 4px;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-
-    .progress-fill {
-      height: 100%;
-      border-radius: 2px;
-      background: linear-gradient(90deg, var(--neon), var(--neon2));
-      width: 0%;
-      transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 0 8px rgba(0, 212, 255, 0.5);
-    }
 
 
     #projects {
@@ -750,6 +769,23 @@
       flex-wrap: wrap;
       gap: 0.5rem;
       margin-bottom: 1.5rem;
+    }
+
+    .group-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(123, 47, 255, 0.08);
+      border: 1px solid rgba(123, 47, 255, 0.2);
+      color: var(--neon2);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      font-size: 0.72rem;
+      font-family: var(--font-mono);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.8rem;
+      width: fit-content;
     }
 
     .stack-badge {
@@ -1011,6 +1047,21 @@
       box-shadow: 0 0 50px rgba(0, 212, 255, 0.5);
     }
 
+    .form-submit:disabled {
+      cursor: not-allowed;
+      opacity: 0.85;
+      transform: none;
+    }
+
+    .form-status {
+      margin-top: 1rem;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text2);
+      text-align: center;
+      min-height: 1.2em;
+    }
+
 
     footer {
       background: var(--bg);
@@ -1234,5 +1285,593 @@
 
       .contact-form {
         padding: 1.5rem;
+      }
+    }
+
+    /* LeetCode Dashboard Styles */
+    .leetcode-wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .leetcode-card {
+      background: rgba(10, 10, 22, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .leetcode-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      padding-bottom: 1.2rem;
+    }
+
+    .leetcode-header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .leetcode-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+
+    .leetcode-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(0, 212, 255, 0.08);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      color: var(--neon);
+      padding: 0.35rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: var(--neon);
+      box-shadow: 0 0 10px var(--neon);
+      animation: leetcode-blink 1.8s infinite ease-in-out;
+    }
+
+    @keyframes leetcode-blink {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 1; }
+    }
+
+    .leetcode-refresh-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text2);
+      font-size: 1rem;
+      transition: all var(--transition);
+      backdrop-filter: blur(12px);
+    }
+
+    .leetcode-refresh-btn:hover {
+      color: var(--neon);
+      border-color: var(--neon);
+      box-shadow: var(--glow);
+    }
+
+    .leetcode-refresh-btn.spinning i {
+      animation: leetcode-spin 0.8s linear infinite;
+    }
+
+    @keyframes leetcode-spin {
+      100% { transform: rotate(360deg); }
+    }
+
+    .leetcode-body {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .leetcode-chart-panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .leetcode-circular-wrap {
+      position: relative;
+      width: 170px;
+      height: 170px;
+    }
+
+    .leetcode-circular-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .circle-bg {
+      fill: none;
+      stroke: rgba(255, 255, 255, 0.04);
+      stroke-width: 9;
+    }
+
+    .circle-fg {
+      fill: none;
+      stroke: var(--neon);
+      stroke-width: 9;
+      stroke-linecap: round;
+      stroke-dasharray: 376.99; /* 2 * PI * r (r=60 -> 376.99) */
+      stroke-dashoffset: 376.99; /* Fully hidden initially */
+      transition: stroke-dashoffset 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .circle-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      line-height: 1.15;
+    }
+
+    .solved-num {
+      font-family: var(--font-display);
+      font-size: 2.1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .solved-total {
+      font-size: 0.85rem;
+      color: var(--text2);
+      margin-top: -1px;
+    }
+
+    .solved-status {
+      font-size: 0.68rem;
+      color: var(--neon);
+      font-family: var(--font-mono);
+      font-weight: 600;
+      letter-spacing: 1.8px;
+      margin-top: 5px;
+    }
+
+    .leetcode-attempting {
+      margin-top: 1.2rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text2);
+      letter-spacing: 0.5px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 0.4rem 1.2rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .leetcode-attempting span {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .leetcode-bars-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+
+    .bar-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .bar-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .bar-label {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    .bar-nums {
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .bar-slash {
+      color: rgba(255, 255, 255, 0.15);
+      margin: 0 3px;
+    }
+
+    .bar-max {
+      color: var(--text2);
+    }
+
+    .leetcode-progress-bar {
+      height: 7px;
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .progress-fill {
+      height: 100%;
+      border-radius: 4px;
+      width: 0%;
+      transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progress-fill.easy {
+      background: linear-gradient(90deg, var(--neon), var(--neon2));
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.35);
+    }
+
+    .progress-fill.medium {
+      background: linear-gradient(90deg, var(--neon), #0055ff);
+      box-shadow: 0 0 10px rgba(0, 85, 255, 0.35);
+    }
+
+    .progress-fill.hard {
+      background: linear-gradient(90deg, var(--neon2), var(--neon3));
+      box-shadow: 0 0 10px rgba(189, 0, 255, 0.35);
+    }
+
+    .leetcode-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.2rem;
+    }
+
+    .metric-card {
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      transition: all var(--transition);
+    }
+
+    .metric-card:hover {
+      border-color: var(--neon2);
+      background: rgba(123, 47, 255, 0.05);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+    }
+
+    .metric-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+      filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+    }
+
+    .metric-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      overflow: hidden;
+    }
+
+    .metric-title {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      font-family: var(--font-mono);
+      color: var(--text2);
+      letter-spacing: 0.8px;
+    }
+
+    .metric-val {
+      font-size: 1.15rem;
+      font-weight: 700;
+      font-family: var(--font-display);
+      color: var(--text);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .metric-val .metric-slash {
+      color: rgba(255, 255, 255, 0.15);
+      font-size: 0.85rem;
+      margin: 0 2px;
+    }
+
+    .metric-desc {
+      font-size: 0.7rem;
+      color: var(--text2);
+      line-height: 1.3;
+    }
+
+    /* LeetCode Responsiveness */
+    @media (max-width: 1024px) {
+      .leetcode-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .leetcode-body {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .leetcode-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .leetcode-metrics {
+        grid-template-columns: 1fr;
+      }
+      .leetcode-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem;
+      }
+      .leetcode-refresh-btn {
+        align-self: flex-end;
+        margin-top: -3.8rem;
+      }
+    }
+
+    /* How I Work Section Styles */
+    #how-i-work {
+      background: linear-gradient(180deg, var(--bg3) 0%, var(--bg) 100%);
+    }
+
+    .process-grid {
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      position: relative;
+    }
+
+    .process-grid::before {
+      content: '';
+      position: absolute;
+      top: 48px;
+      left: 15%;
+      right: 15%;
+      height: 1px;
+      background: linear-gradient(90deg, var(--neon), var(--neon2), var(--neon3));
+      z-index: 1;
+      opacity: 0.15;
+    }
+
+    .process-card {
+      background: rgba(10, 10, 22, 0.65);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      backdrop-filter: blur(16px);
+      transition: all var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .process-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .process-icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      position: relative;
+      margin-bottom: 1.8rem;
+      border: 1px solid transparent;
+      transition: all var(--transition);
+    }
+
+    .process-badge {
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+
+    .process-card-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .process-card-text {
+      font-size: 0.88rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* Color variations matching black, blue, purple theme */
+    .step-blue .process-icon-wrap {
+      border-color: rgba(0, 212, 255, 0.15);
+      background: rgba(0, 212, 255, 0.04);
+      color: var(--neon);
+    }
+
+    .step-blue .process-badge {
+      background: var(--neon);
+      color: #050508;
+    }
+
+    .step-blue .process-card-title {
+      color: var(--neon);
+    }
+
+    .step-blue:hover {
+      border-color: var(--neon);
+      box-shadow: 0 15px 30px rgba(0, 212, 255, 0.15);
+    }
+
+    .step-purple .process-icon-wrap {
+      border-color: rgba(123, 47, 255, 0.15);
+      background: rgba(123, 47, 255, 0.04);
+      color: var(--neon2);
+    }
+
+    .step-purple .process-badge {
+      background: var(--neon2);
+      color: #050508;
+    }
+
+    .step-purple .process-card-title {
+      color: var(--neon2);
+    }
+
+    .step-purple:hover {
+      border-color: var(--neon2);
+      box-shadow: 0 15px 30px rgba(123, 47, 255, 0.15);
+    }
+
+    .step-violet .process-icon-wrap {
+      border-color: rgba(189, 0, 255, 0.15);
+      background: rgba(189, 0, 255, 0.04);
+      color: var(--neon3);
+    }
+
+    .step-violet .process-badge {
+      background: var(--neon3);
+      color: #050508;
+    }
+
+    .step-violet .process-card-title {
+      color: var(--neon3);
+    }
+
+    .step-violet:hover {
+      border-color: var(--neon3);
+      box-shadow: 0 15px 30px rgba(189, 0, 255, 0.15);
+    }
+
+    /* Tech Marquee Ticker Styles */
+    .ticker-section {
+      text-align: center;
+      max-width: 100%;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+
+    .ticker-title {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      color: var(--text2);
+      letter-spacing: 4px;
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .marquee-container {
+      overflow: hidden;
+      width: 100%;
+      display: flex;
+      position: relative;
+      mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, white 15%, white 85%, transparent);
+    }
+
+    .marquee-content {
+      display: flex;
+      gap: 1.5rem;
+      animation: leetcode-marquee 30s linear infinite;
+      width: max-content;
+      padding: 0.5rem 0;
+    }
+
+    .ticker-item {
+      padding: 0.45rem 1.4rem;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--text2);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      transition: all var(--transition);
+      cursor: default;
+    }
+
+    .ticker-item:hover {
+      border-color: var(--neon);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 12px rgba(0, 212, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    @keyframes leetcode-marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .process-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .process-grid::before {
+        display: none;
       }
     }
